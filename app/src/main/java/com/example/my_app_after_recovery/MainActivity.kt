@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         loadingSpinner = findViewById(R.id.loadingSpinner)
         adImage = findViewById(R.id.adImage)
 
-        Glide.with(this).load(R.drawable.placeholder_1).into(adImage)
+        Glide.with(this).load(R.drawable.default_ad).into(adImage)
 
         openMapButton.setOnClickListener {
             val latLng = locationText.text.toString()
@@ -132,7 +132,7 @@ class MainActivity : AppCompatActivity() {
             if (matchedZone != null) {
                 Glide.with(this)
                     .load(matchedZone.mediaURL)
-                    .placeholder(R.drawable.placeholder_1)
+                    .placeholder(R.drawable.default_ad)
                     .error(R.drawable.uploadfail)
                     .into(adImage)
 
